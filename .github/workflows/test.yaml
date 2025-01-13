@@ -14,4 +14,6 @@ jobs:
           dotnet build -c Release
 
       - name: Generate output
-        run: ./bin/Release/WaveFunctionCollapse
+        run: |
+          export PATH=/home/ubuntu/dotnet:$PATH
+          ./bin/Release/WaveFunctionCollapse
