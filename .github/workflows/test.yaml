@@ -5,6 +5,8 @@ on: [workflow_dispatch, pull_request]
 jobs:
   test:
     runs-on: self-hosted
+    env:
+      PATH: /home/ubuntu/dotnet:$PATH
     steps:
       - uses: actions/checkout@v4
 
